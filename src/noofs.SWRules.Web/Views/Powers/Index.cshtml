@@ -22,6 +22,12 @@
                     @L("Powers")
                 </h2>
             </div>
+            <div>
+                <p>
+                    <a class="btn btn-primary" asp-action="Create">Create New</a>
+                </p>
+            </div>
+
             <div class="body table-responsive">
                 <table class="table">
                     <thead>
@@ -44,19 +50,25 @@
                             <th>
                                 <label asp-for="Powers[0].Book"></label>
                             </th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach (var power in Model.Powers)
                         {
-                        <tr>
-                            <td>@power.Name</td>
-                            <td>@power.Rank</td>
-                            <td>@power.Distance</td>
-                            <td>@power.Duration</td>
-                            <td>@power.Points</td>
-                            <td>@power.Book</td>
-                        </tr>
+                            <tr>
+                                <td>@power.Name</td>
+                                <td>@power.Rank</td>
+                                <td>@power.Distance</td>
+                                <td>@power.Duration</td>
+                                <td>@power.Points</td>
+                                <td>@power.Book</td>
+                                <td>
+                                    <a asp-action="Edit" asp-route-id="@power.Id">Edit</a> |
+                                    <a asp-action="Details" asp-route-id="@power.Id">Details</a> |
+                                    <a asp-action="Delete" asp-route-id="@power.Id">Delete</a>
+                                </td>
+                            </tr>
                         }
                     </tbody>
                 </table>
