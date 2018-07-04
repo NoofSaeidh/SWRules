@@ -53,43 +53,6 @@
                 <span asp-validation-for="Text" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <div class="checkbox">
-                    <label>
-                        <input asp-for="IsDeleted" /> @Html.DisplayNameFor(model => model.IsDeleted)
-                    </label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeleterUserId" class="control-label"></label>
-                <input asp-for="DeleterUserId" class="form-control" />
-                <span asp-validation-for="DeleterUserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeletionTime" class="control-label"></label>
-                <input asp-for="DeletionTime" class="form-control" />
-                <span asp-validation-for="DeletionTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastModificationTime" class="control-label"></label>
-                <input asp-for="LastModificationTime" class="form-control" />
-                <span asp-validation-for="LastModificationTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LastModifierUserId" class="control-label"></label>
-                <input asp-for="LastModifierUserId" class="form-control" />
-                <span asp-validation-for="LastModifierUserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreationTime" class="control-label"></label>
-                <input asp-for="CreationTime" class="form-control" />
-                <span asp-validation-for="CreationTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreatorUserId" class="control-label"></label>
-                <input asp-for="CreatorUserId" class="form-control" />
-                <span asp-validation-for="CreatorUserId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
         </form>
