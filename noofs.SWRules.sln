@@ -19,6 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "noofs.SWRules.Tests", "test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "noofs.SWRules.Web.Tests", "test\noofs.SWRules.Web.Tests\noofs.SWRules.Web.Tests.csproj", "{5D441612-29CA-4DAD-9945-B9DE11CE026C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{68EED719-23C8-4C87-B3F7-F7B1C416C75B}"
+	ProjectSection(SolutionItems) = preProject
+		swrules-database.db = swrules-database.db
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +65,8 @@ Global
 		{DC780BC4-4EAC-4C63-9052-6F3169A59FA4} = {AFAA0841-BD93-466F-B8F4-FB4EEC86F1FC}
 		{0D4C5D00-C144-4213-A007-4B8944113AB1} = {F10AA149-2626-486E-85BB-9CD5365F3016}
 		{5D441612-29CA-4DAD-9945-B9DE11CE026C} = {F10AA149-2626-486E-85BB-9CD5365F3016}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B62164E9-526B-4A86-AC06-FFFAF6EFE1F0}
 	EndGlobalSection
 EndGlobal

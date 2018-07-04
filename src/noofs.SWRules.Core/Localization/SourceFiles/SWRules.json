@@ -1,11 +1,13 @@
 ﻿{
-  "culture": "en",
+  "culture": "ru",
   "texts": {
     "HelloWorld": "Hello World!",
     "ChangeLanguage": "Change language",
     "HomePage": "HomePage",
     "About": "About",
     "Home_Description": "Welcome to SWRules...",
-    "About_Description": "This is a simple startup template to use ASP.NET Core with ABP framework."
+    "About_Description": "This is a simple startup template to use ASP.NET Core with ABP framework.",
+    "Powers": "Силы",
+    "Power": "Сила"
   }
 }

@@ -9,6 +9,10 @@ namespace noofs.SWRules.EntityFrameworkCore
         typeof(AbpEntityFrameworkCoreModule))]
     public class SWRulesEntityFrameworkCoreModule : AbpModule
     {
+        public override void PreInitialize()
+        {
+            Configuration.UnitOfWork.IsTransactional = false;
+        }
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(typeof(SWRulesEntityFrameworkCoreModule).GetAssembly());

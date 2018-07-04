@@ -11,7 +11,7 @@
     <RootNamespace>noofs.SWRules</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Localization\SourceFiles\*.json" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
+    <EmbeddedResource Include="Localization\SourceFiles\SWRules.json" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Abp" Version="3.7.2" />

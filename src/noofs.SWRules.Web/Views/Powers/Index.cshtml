@@ -1,0 +1,66 @@
+﻿@using noofs.SWRules.Web.Startup
+@using noofs.SWRules.Web.Views.Powers.ViewModels
+@{
+    ViewBag.ActiveMenu = PageNames.Powers;
+}
+@model PowersListViewModel
+@section scripts
+    {
+    <environment names="Development">
+        <script src="~/js/views/powers/index.js"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="~/js/views/powers/index.min.js"></script>
+    </environment>
+}
+
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    @L("Powers")
+                </h2>
+            </div>
+            <div class="body table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                <label asp-for="Powers[0].Name"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Powers[0].Rank"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Powers[0].Distance"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Powers[0].Duration"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Powers[0].Points"></label>
+                            </th>
+                            <th>
+                                <label asp-for="Powers[0].Book"></label>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var power in Model.Powers)
+                        {
+                        <tr>
+                            <td>@power.Name</td>
+                            <td>@power.Rank</td>
+                            <td>@power.Distance</td>
+                            <td>@power.Duration</td>
+                            <td>@power.Points</td>
+                            <td>@power.Book</td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

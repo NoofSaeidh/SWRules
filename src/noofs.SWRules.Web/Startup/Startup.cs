@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Razor.Internal;
+using Microsoft.AspNetCore.Razor.Language;
+using Microsoft.CodeAnalysis.Razor;
 
 namespace noofs.SWRules.Web.Startup
 {
@@ -34,6 +37,7 @@ namespace noofs.SWRules.Web.Startup
                 options.IocManager.IocContainer.AddFacility<LoggingFacility>(
                     f => f.UseAbpLog4Net().WithConfig("log4net.config")
                 );
+                //options.IocManager.IsRegistered<LazyMetadataReferenceFeature>();
             });
         }
 
@@ -57,7 +61,7 @@ namespace noofs.SWRules.Web.Startup
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=home}/{action=index}/{id?}");
             });
         }
     }

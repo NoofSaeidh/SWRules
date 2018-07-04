@@ -17,14 +17,22 @@ namespace noofs.SWRules.Web.Startup
                         L("HomePage"),
                         url: "",
                         icon: "fa fa-home"
-                        )
+                    )
                 ).AddItem(
                     new MenuItemDefinition(
                         PageNames.About,
                         L("About"),
                         url: "Home/About",
                         icon: "fa fa-info"
-                        )
+                    )
+                )
+                .AddItem(
+                    new MenuItemDefinition(
+                        PageNames.Powers,
+                        L("Powers"),
+                        url: "Powers",
+                        icon: "fa fa-hand"
+                    )
                 );
         }
 
