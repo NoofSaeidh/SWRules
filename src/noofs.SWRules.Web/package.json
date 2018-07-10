@@ -1,0 +1,20 @@
+{
+  "version": "1.0.0",
+  "name": "sw-rules",
+  "private": true,
+  "devDependencies": {},
+  "dependencies": {
+    "bootstrap": "4.1.1",
+    "jquery": "3.3.1",
+    "toastr": "^2.1.2",
+    "sweetalert": "^2.1.0",
+    "famfamfam-flags": "^1.0.0",
+    "font-awesome": "^4.6.3",
+    "json2": "^0.4.0",
+    "moment": "^2.14.1",
+    "jquery-validation": "^1.15.0",
+    "jquery-validation-unobtrusive": "^3.2.10",
+    "spin.js": "^4.0.0",
+    "abp-web-resources": "^3.3.0"
+  }
+}
