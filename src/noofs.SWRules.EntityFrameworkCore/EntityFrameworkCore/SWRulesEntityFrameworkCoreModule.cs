@@ -1,4 +1,6 @@
-﻿using Abp.EntityFrameworkCore;
+﻿using Abp.Dependency;
+using Abp.EntityFrameworkCore;
+using Abp.EntityHistory;
 using Abp.Modules;
 using Abp.Reflection.Extensions;
 
@@ -11,6 +13,9 @@ namespace noofs.SWRules.EntityFrameworkCore
     {
         public override void PreInitialize()
         {
+            Configuration.EntityHistory.IsEnabled = true;
+            Configuration.EntityHistory.IsEnabledForAnonymousUsers = true;
+
             Configuration.UnitOfWork.IsTransactional = false;
         }
         public override void Initialize()

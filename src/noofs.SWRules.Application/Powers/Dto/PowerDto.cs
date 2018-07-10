@@ -1,5 +1,6 @@
-﻿using Abp.Domain.Entities;
-using Abp.Domain.Entities.Auditing;
+﻿using Abp.Application.Services.Dto;
+using Abp.AutoMapper;
+using noofs.SWRules.Powers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,9 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace noofs.SWRules.Rules
+namespace noofs.SWRules.Powers.Dto
 {
-    public class Power : FullAuditedEntity
+    [AutoMap(typeof(Power))]
+    public class PowerDto : FullAuditedEntityDto
     {
         [Display(Name = "Название", Order = 100)]
         public string Name { get; set; }

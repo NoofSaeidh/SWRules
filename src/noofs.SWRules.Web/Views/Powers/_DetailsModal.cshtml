@@ -1,0 +1,65 @@
+﻿@using noofs.SWRules.Web.Views.Shared.Modals;
+@model noofs.SWRules.Powers.Dto.PowerDto
+@{
+    Layout = null;
+}
+@Html.Partial("~/Views/Shared/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(L("PowerDetails")))
+
+
+<div class="modal-body">
+    <div class="tab-content">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Book)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Book)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Points)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Points)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Duration)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Duration)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Distance)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Distance)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Rank)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Rank)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Trappings)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Trappings)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Text)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Text)
+            </dd>
+        </dl>
+    </div>
+</div>
+
+@Html.Partial("~/Views/Shared/Modals/_ModalFooterWithClose.cshtml")
+@*<script src="~/view-resources/Views/Powers/_DetailsModal.js" asp-append-version="true"></script>*@

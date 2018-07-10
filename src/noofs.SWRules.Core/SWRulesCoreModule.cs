@@ -1,4 +1,6 @@
-﻿using Abp.Modules;
+﻿using Abp;
+using Abp.Domain.Entities.Auditing;
+using Abp.Modules;
 using Abp.Reflection.Extensions;
 using noofs.SWRules.Localization;
 
@@ -9,7 +11,7 @@ namespace noofs.SWRules
         public override void PreInitialize()
         {
             Configuration.Auditing.IsEnabledForAnonymousUsers = true;
-
+            
             SWRulesLocalizationConfigurer.Configure(Configuration.Localization);
         }
 

@@ -1,11 +1,12 @@
-﻿@using noofs.SWRules.Web.Startup
-@using noofs.SWRules.Web.Views.Powers.ViewModels
+﻿@using Abp.Application.Services.Dto
+@using noofs.SWRules.Powers.Dto
+@using noofs.SWRules.Web.Startup
 @{
     ViewBag.ActiveMenu = PageNames.Powers;
 }
-@model PowersListViewModel
+@model PagedResultDto<PowerDto>
 @section scripts
-    {
+{
     <environment names="Development">
         <script src="~/js/views/powers/index.js"></script>
     </environment>
@@ -33,28 +34,28 @@
                     <thead>
                         <tr>
                             <th>
-                                <label asp-for="Powers[0].Name"></label>
+                                <label asp-for="Items[0].Name"></label>
                             </th>
                             <th>
-                                <label asp-for="Powers[0].Rank"></label>
+                                <label asp-for="Items[0].Rank"></label>
                             </th>
                             <th>
-                                <label asp-for="Powers[0].Distance"></label>
+                                <label asp-for="Items[0].Distance"></label>
                             </th>
                             <th>
-                                <label asp-for="Powers[0].Duration"></label>
+                                <label asp-for="Items[0].Duration"></label>
                             </th>
                             <th>
-                                <label asp-for="Powers[0].Points"></label>
+                                <label asp-for="Items[0].Points"></label>
                             </th>
                             <th>
-                                <label asp-for="Powers[0].Book"></label>
+                                <label asp-for="Items[0].Book"></label>
                             </th>
                             <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var power in Model.Powers)
+                        @foreach (var power in Model.Items)
                         {
                             <tr>
                                 <td>@power.Name</td>
@@ -64,6 +65,12 @@
                                 <td>@power.Points</td>
                                 <td>@power.Book</td>
                                 <td>
+                                    <a href="#" class="dropdown-toggle details-power" data-toggle="modal" role="button"
+                                       data-power-id="@power.Id" data-target="#power-details-modal"
+                                       aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">Details</i>
+                                    </a>
+
                                     <a asp-action="Edit" asp-route-id="@power.Id">Edit</a> |
                                     <a asp-action="Details" asp-route-id="@power.Id">Details</a> |
                                     <a asp-action="Delete" asp-route-id="@power.Id">Delete</a>
@@ -73,6 +80,14 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="power-details-modal" tabindex="-1" role="dialog" data-backdrop="static">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
         </div>
     </div>
 </div>

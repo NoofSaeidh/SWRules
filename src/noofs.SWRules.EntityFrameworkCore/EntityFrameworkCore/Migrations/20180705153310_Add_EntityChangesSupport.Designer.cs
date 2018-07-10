@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using noofs.SWRules.EntityFrameworkCore;
 
 namespace noofs.SWRules.EntityFrameworkCore.Migrations
 {
     [DbContext(typeof(SWRulesDbContext))]
-    partial class RulesContextModelSnapshot : ModelSnapshot
+    [Migration("20180705153310_Add_EntityChangesSupport")]
+    partial class Add_EntityChangesSupport
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

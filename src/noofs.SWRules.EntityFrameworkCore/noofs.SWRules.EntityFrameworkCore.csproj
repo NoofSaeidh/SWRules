@@ -14,6 +14,15 @@
     <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
     <RootNamespace>noofs.SWRules</RootNamespace>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="EntityFrameworkCore\Migrations\20180705153137_Add-EntityChangesSupport.cs" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\noofs.SWRules.Core\noofs.SWRules.Core.csproj" />
   </ItemGroup>
